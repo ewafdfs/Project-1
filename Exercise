@@ -1,0 +1,40 @@
+
+public class Exercise {
+	private String name;
+	private double time;
+	private int calories;
+	//constructor
+	public Exercise(String n,double t,int c,Person p){
+		double weight=p.getWeight();
+		name=n;
+		time=t;
+		calories=c;
+	}
+	//get and set method
+	public String getName(){
+		return name;
+	}
+	
+	public double getTime(){
+		return time;
+	}
+	
+	public int getCalory(){
+		return calories;
+	}
+	
+	public void setName(String n){
+		name=n;
+	}
+	public void setTime(double t){
+		time=t;
+	}
+	public void setCalory(int c){
+		calories=c;
+	}
+	
+	public String toString(){
+		return "name: "+name+"time: "+time+"calory: "+calories;
+	}
+		
+	}
