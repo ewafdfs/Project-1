@@ -1,0 +1,33 @@
+public class Football extends Exercise {
+
+	public Football(String n, double t, int c, Person p) {
+		super(n, t, c, p);
+		setName("Football");
+	}
+
+	public void setTime() {
+		Scanner kb = new Scanner(System.in);
+		System.out.println("Please enter the sport time(how many hours): ");
+		double d = kb.nextDouble();
+		super.setTime(d);
+	}
+
+	public void setCalories(int c) {
+		Scanner dk = new Scanner(System.in);
+		System.out.println("Please choose the weight between 130 and 205 lbs: ");
+		double w = dk.nextDouble();
+
+		if (129 < w && w <= 155) {
+			setCalory(531);
+		} else if (155 < w && w <= 180) {
+			setCalory(633);
+		} else if (180 < w && w <= 205) {
+			setCalory(735);
+		} else if (205 < w && w <= 230) {
+			setCalory(838);
+		} else {
+			System.out.println("Please choose the weight between 130 and 205 lbs: ");
+			w = dk.nextDouble();
+		}
+	}
+}
