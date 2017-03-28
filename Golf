@@ -1,0 +1,36 @@
+
+import java.util.Scanner;
+
+public class Golf extends Exercise {
+
+	public Golf(String n, double t, int c, Person p) {
+		super(n, t, c, p);
+		setName("Golf");
+	}
+
+	public void setTime() {
+		Scanner kb = new Scanner(System.in);
+		System.out.println("Please enter the sport time(how many hours): ");
+		double d = kb.nextDouble();
+		super.setTime(d);
+	}
+
+	public void setCalories(int c) {
+		Scanner dk = new Scanner(System.in);
+		System.out.println("Please choose the weight between 130 and 205 lbs: ");
+		double w = dk.nextDouble();
+
+		if (129 < w && w <= 155) {
+			setCalory(177);
+		} else if (155 < w && w <= 180) {
+			setCalory(211);
+		} else if (180 < w && w <= 205) {
+			setCalory(245);
+		} else if (205 < w && w <= 230) {
+			setCalory(279);
+		} else {
+			System.out.println("Please choose the weight between 130 and 205 lbs: ");
+			w = dk.nextDouble();
+		}
+	}
+}
